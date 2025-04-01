@@ -1,5 +1,5 @@
-export const requestUpdateTodo = (id, updatedFields, refreshTodoList) => {
-    fetch(`http://localhost:3001/todos/${id}`, {
+export const requestUpdateTodo = (id, updatedFields) => {
+    return fetch(`http://localhost:3001/todos/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json;charset=utf-8' },
         body: JSON.stringify(updatedFields),
@@ -7,9 +7,10 @@ export const requestUpdateTodo = (id, updatedFields, refreshTodoList) => {
         .then((rawResponse) => rawResponse.json())
         .then((response) => {
             console.log('Задача обновлена, ответ сервера: ', response);
-            refreshTodoList();
+            return response;
         })
         .catch((error) => {
             console.error('Ошибка обновления задачи:', error);
+            throw error; // Прокидываем ошибку дальше, чтобы обработать снаружи
         });
 };

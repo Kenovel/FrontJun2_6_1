@@ -11,11 +11,3 @@
 .app h1 {
     align-self: center;
 }
-
-.newTodoPanel {
-    display: flex;
-}
-
-.newTodo {
-    flex: 1;
-}

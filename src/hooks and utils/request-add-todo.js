@@ -1,7 +1,8 @@
-export const requestAddTodo = (newTodo, setNewTodo, refreshTodoList) => {
-    if (!newTodo.trim()) return;
+export const requestAddTodo = (newTodo) => {
+    if (!newTodo.trim()) return Promise.reject('Заголовок не может быть пустым');
     const newTask = { title: newTodo, completed: false };
-    fetch('http://localhost:3001/todos', {
+
+    return fetch('http://localhost:3001/todos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json;charset=utf-8' },
         body: JSON.stringify(newTask),
@@ -9,7 +10,6 @@ export const requestAddTodo = (newTodo, setNewTodo, refreshTodoList) => {
         .then((rawResponse) => rawResponse.json())
         .then((response) => {
             console.log('Новая задача добавлена, ответ от сервера:', response);
-            refreshTodoList();
-        })
-        .finally(() => setNewTodo(''));
+            return response; // Возвращаем ответ, чтобы его можно было использовать снаружи
+        });
 };

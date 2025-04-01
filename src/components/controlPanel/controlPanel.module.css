@@ -1,0 +1,7 @@
+.newTodoPanel {
+    display: flex;
+}
+
+.newTodo {
+    flex: 1;
+}
