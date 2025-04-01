@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './controlPanel.module.css';
-import { requestAddTodo } from '../../hooks and utils';
+import { requestAddTodo } from '../../hooksAndUtils';
 
 export const ControlPanel = ({
     isSorted,

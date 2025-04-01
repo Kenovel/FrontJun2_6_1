@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './todo.module.css';
-import { requestDeleteTodo, requestUpdateTodo } from '../../hooks and utils';
+import { requestDeleteTodo, requestUpdateTodo } from '../../hooksAndUtils';
 
 export const Todo = ({ id, title, completed, refreshTodoList }) => {
     const [isEditing, setIsEditing] = useState(false);

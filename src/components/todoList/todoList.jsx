@@ -1,4 +1,4 @@
-import { useRequestGetTodos } from '../../hooks and utils';
+import { useRequestGetTodos } from '../../hooksAndUtils';
 import { useDebounce } from '../../useDebounce';
 import { Todo } from '../todo/todo';
 import styles from './todoList.module.css';
