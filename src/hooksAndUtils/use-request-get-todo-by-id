@@ -1,0 +1,17 @@
+import { useEffect, useState } from 'react';
+
+export const useRequestGetTodoById = (id) => {
+    const [todo, setTodo] = useState({ title: '', completed: false });
+    useEffect(() => {
+        fetch(`http://localhost:3001/todos/${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setTodo(data);
+            });
+    }, []);
+
+    return {
+        todo,
+        setTodo,
+    };
+};

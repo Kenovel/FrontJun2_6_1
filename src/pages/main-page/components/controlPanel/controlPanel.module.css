@@ -1,0 +1,12 @@
+.controlPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.newTodoPanel {
+    display: flex;
+}
+
+.newTodo {
+    flex: 1;
+}

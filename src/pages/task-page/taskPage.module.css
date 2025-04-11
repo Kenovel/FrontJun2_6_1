@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bbb;
+}
+
+.todoStatusWrapper {
+    display: flex;
+    align-items: center;
+}
+.todoInput {
+    box-sizing: border-box;
+    flex: 1; /* Растягиваем Link на всё доступное пространство */
+    white-space: wrap; /* Запрещаем перенос текста */
+    width: 100%; /* Занимает всю ширину родителя */
+    min-width: 100%;
+    max-width: 100%;
+    height: 500px;
+    padding: 5px;
+}
+
+.todoTitle {
+    word-break: break-word; /* переносим слова, если они длинные */
+    padding: 5px;
+}
+
+.buttonPanel {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './controlPanel.module.css';
-import { requestAddTodo } from '../../hooksAndUtils';
+import { requestAddTodo } from '../../../../hooksAndUtils';
 
 export const ControlPanel = ({
     isSorted,
@@ -22,7 +22,7 @@ export const ControlPanel = ({
     };
 
     return (
-        <>
+        <div className={styles.controlPanel}>
             <div className={styles.newTodoPanel}>
                 <input
                     className={styles.newTodo}
@@ -43,6 +43,6 @@ export const ControlPanel = ({
                 value={searchQuery}
                 onChange={({ target }) => setSearchQuery(target.value)}
             />
-        </>
+        </div>
     );
 };

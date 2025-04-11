@@ -5,9 +5,4 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-
-}
-
-.app h1 {
-    align-self: center;
 }

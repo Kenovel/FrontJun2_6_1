@@ -1,6 +1,6 @@
-import { useRequestGetTodos } from '../../hooksAndUtils';
-import { useDebounce } from '../../useDebounce';
-import { Todo } from '../todo/todo';
+import { useRequestGetTodos } from '../../../../hooksAndUtils';
+import { useDebounce } from '../../../../useDebounce';
+import { TodoPreview } from '../../components';
 import styles from './todoList.module.css';
 
 export const TodoList = ({ isRefreshing, searchQuery, isSorted, setIsSorted, refreshTodoList }) => {
@@ -17,9 +17,9 @@ export const TodoList = ({ isRefreshing, searchQuery, isSorted, setIsSorted, ref
         : filteredTodos;
 
     return (
-        <div>
+        <div className={styles.todoList}>
             {sortedTodos.map(({ id, title, completed }) => (
-                <Todo
+                <TodoPreview
                     key={id}
                     id={id}
                     title={title}

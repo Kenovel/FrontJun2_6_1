@@ -1,0 +1,16 @@
+.todo {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.todoTitle {
+    flex: 1; /* Растягиваем Link на всё доступное пространство */
+    overflow: hidden; /* Скрываем содержимое, которое выходит за границы */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    text-overflow: ellipsis; /* Обрезаем текст и добавляем троеточие */
+}
